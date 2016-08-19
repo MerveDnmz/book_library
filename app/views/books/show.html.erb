@@ -1,38 +1,39 @@
-<%= image_tag @book.image.url(:medium) %>
-<p>
-  <strong>Name:</strong>
-  <%= @book.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
-
-<p>
-  <strong>Authors:</strong>
-  <%= @book.authors %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @book.rating %>
-</p>
-
-<p>
-  <strong>Publishers:</strong>
-  <%= @book.publishers %>
-</p>
-
-<p>
-  <strong>Categories:</strong>
-  <%= @book.categories %>
-</p>
-
-<p>
-  <strong>Users:</strong>
-  <%= @book.users %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag @book.image.url(:medium) %>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><strong>Name:</strong></td>
+                <td><%= @book.name %></td>
+              </tr>
+              <tr>
+                <td><strong>Description:</strong></td>
+                <td><%= @book.description %></td>
+              </tr>
+              <tr>
+                <td><strong>Publishers:</strong></td>
+                <td><%= @book.publishers %></td>
+              </tr>
+              <tr>
+                <td><strong>Authors:</strong></td>
+                <td><%= @book.authors %></td>
+              </tr>
+              <tr>
+                <td><strong>Rating:</strong></td>
+                <td><%= @book.rating %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
